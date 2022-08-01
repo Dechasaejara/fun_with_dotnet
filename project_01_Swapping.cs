@@ -58,8 +58,7 @@ namespace having_Fun
             f_name=l_name;
             l_name=temp;
            
-            Console.WriteLine($"After SWapping first name= {f_name}, last name = {l_name}"); 
-            
+            Console.WriteLine($"After SWapping first name= {f_name}, last name = {l_name}");             
             
         }
     }
