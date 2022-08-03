@@ -52,5 +52,9 @@ namespace having_Fun
                 Console.WriteLine($"{frahnit} frahnit");
             }
         }
+        public class MyClass
+        {
+            
+        }
     }
 }
