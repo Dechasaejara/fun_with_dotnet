@@ -10,12 +10,14 @@ namespace Algebra
             {
                 Console.WriteLine($"Select Your Choice.");
                 Console.WriteLine($"1. Percentage");
+                Console.WriteLine($"2. Fractions");
                 Console.WriteLine($"4. Back");
                 Console.WriteLine($"5. Exit");
 
                 switch (int.Parse(Console.ReadLine()))
                 {
                     case 1: Percentage.RunPercentage(); break;
+                    case 2: Fractions.RunFractions(); break;
                     case 4: having_Fun.Program.Runmain(); break;
                     case 5: System.Environment.Exit(0); break;
                     default:
