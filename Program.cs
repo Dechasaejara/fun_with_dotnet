@@ -16,11 +16,13 @@ namespace having_Fun
             {
                 Console.WriteLine($"Select Your Choice.");
                 Console.WriteLine($"1. Algebra");
+                Console.WriteLine($"2. Bank Short Codes");
                 Console.WriteLine($"5. Exit");
 
                 switch (int.Parse(Console.ReadLine()))
                 {
                     case 1: RunAlgebra.runAlgebra(); break;
+                    case 2: Bank.RunBank(); break;
                     case 5: System.Environment.Exit(0); break;
                     default:
                         Console.WriteLine($"Invalid Input!"); break;

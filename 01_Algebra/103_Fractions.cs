@@ -10,17 +10,15 @@ namespace Algebra
             do
             {
                 Console.WriteLine($"Select Your Choice.");
-                Console.WriteLine($"1. Find Percentage");
+                Console.WriteLine($"1. Decimal To Fractions");
                 Console.WriteLine($"2. Fraction to Decimal");
-                Console.WriteLine($"3. Find Total Value.");
                 Console.WriteLine($"4. Main Menu");
                 Console.WriteLine($"5. Exit");
 
                 switch (int.Parse(Console.ReadLine()))
                 {
-                    case 1: findPercentage(); break;
+                    case 1: DecimalToFraction(); break;
                     case 2: fractionToDecimal(); break;
-                    case 3: findTotalValue(); break;
                     case 4: having_Fun.Program.Runmain(); break;
                     case 5: System.Environment.Exit(0); break;
                     default:
@@ -31,27 +29,38 @@ namespace Algebra
                 Console.WriteLine($"y or n");
                 repeat = char.Parse(Console.ReadLine());
                 Console.Clear();
-            } while (repeat == 'y')
+            } while (repeat == 'y');
         }
-         static void  fractionToDecimal()
+        static void fractionToDecimal()
         {
             Console.Clear();
             Console.WriteLine($"Enter numunator to Convert to Decimal.");
             float numunator = float.Parse(Console.ReadLine());
             Console.WriteLine($"Enter Denumunator to Convert to Decimal.");
             float denumunator = float.Parse(Console.ReadLine());
-            float decimal = numunator / denumunator;
-            Console.WriteLine($"{numunator}/{denumunator} is {decimal}.");
+            float Result = numunator / denumunator;
+            Console.WriteLine($"{numunator}/{denumunator} is {Result}.");
         }
-         static void  DecimalFraction()
+        static void DecimalToFraction()
         {
             Console.Clear();
             Console.WriteLine($"Enter Decimal To Convert to Fractions.");
-            float numunator = float.Parse(Console.ReadLine());
-            Console.WriteLine($"Enter Denumunator to Convert to Decimal.");
-            float denumunator = float.Parse(Console.ReadLine());
-            float decimal = numunator / denumunator;
-            Console.WriteLine($"{numunator}/{denumunator} is {decimal}.");
+            string numunator = Console.ReadLine();
+            if (numunator.Contains('.'))
+            {
+                int pointIndex = numunator.IndexOf('.');
+                String afterPoint = numunator.Substring(pointIndex, numunator.Length - 1);
+                Console.WriteLine($"{afterPoint}");
+            }
+            else
+            {
+                Console.WriteLine($"Invalid Inuput!.");
+
+            }
+
+
+            // float Result = numunator / denumunator;
+            // Console.WriteLine($"{numunator}/{denumunator} is {Result}.");
         }
     }
 }
